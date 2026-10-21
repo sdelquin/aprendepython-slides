@@ -1,1 +1,85 @@
-/* Custom CSS rules */
+.columns {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.col30 {
+  flex: 0 0 30%;
+}
+
+.framed {
+  border: 2px solid white;
+}
+
+.framed-yellow {
+  border: 2px solid #fbc600;
+}
+
+.framed-red {
+  border: 2px solid #f14b59;
+}
+
+.framed-green {
+  border: 2px solid #a6e22e;
+}
+
+a {
+  &::before {
+    content: "❯";
+  }
+}
+
+ul {
+  li {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+
+    &::marker {
+      content: "• ";
+    }
+  }
+}
+
+figure {
+  img {
+    margin-bottom: 0 !important;
+  }
+
+  figcaption {
+    font-size: 50%;
+    font-style: italic;
+  }
+}
+
+.hl {
+  color: yellowgreen;
+  font-weight: bold;
+  &::before {
+    content: "/";
+  }
+  &::after {
+    content: "/";
+  }
+}
+
+.reveal .logo {
+  position: fixed;
+  top: 0px;
+  right: 20px;
+  width: 80px;
+  height: auto;
+  z-index: 100;
+  opacity: 0.1;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.no-prefix {
+  &::before {
+    content: "";
+  }
+}
