@@ -12,7 +12,6 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            source /etc/profile
-            cd code/aprendepython-slides
+            cd ~/code/aprendepython-slides
             git pull
-            just build
+            ~/.local/bin/just build
