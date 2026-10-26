@@ -18,16 +18,21 @@
     <link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
   </head>
   <body>
+    <div class="timer" id="timer">05:00</div>
     <div class="reveal">
       <a class="no-prefix" href="https://aprendepython.es">
-        <img class="logo" src="images/logo-aprendepython.svg" alt="Logo" />
+        <img class="logo" src="images/aprendepython-logo.svg" alt="Logo" />
       </a>
       <div class="slides">
         <section>
           <h1>Aprende Python</h1>
-          <img class="r-stretch" src="./images/logo-aprendepython.svg" />
-          <p>...comiendo pypas</p>
+          <img class="r-stretch" src="./images/aprendepython-logo.svg" />
+          <p>
+            ...comiendo pypas
+            <img class="logo-pypas" src="./images/pypas-logo.svg" />
+          </p>
         </section>
+
         <section>
           <h2>Soy Sergio 👋</h2>
           <div class="columns">
@@ -48,10 +53,191 @@
                 Coorganizador
                 <a href="https://2023.es.pycon.org/">PyConES 2023 Canarias</a>
               </li>
-              <li class="fragment">Tengo un 🎹 pero no sé tocarlo</li>
               <li class="fragment">Me gustan los emojis 😜</li>
             </ul>
           </div>
+        </section>
+
+        <section>
+          <h2>Objetivos 🎯</h2>
+          <ul>
+            <li class="fragment">
+              <span class="hl">Centralizar</span> todos mis apuntes.
+            </li>
+            <li class="fragment">
+              <span class="hl">Reutilizar</span> la guía para varios propósitos.
+            </li>
+            <li class="fragment">
+              Ofrecer un <span class="hl">recurso abierto</span> para la
+              comunidad.
+            </li>
+            <li class="fragment">
+              Disponer de una
+              <span class="hl">herramienta para ejercicios</span>.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <header>
+            <h2>aprende python</h2>
+            <h3>Arquitectura 🏗️</h3>
+          </header>
+          <div class="columns">
+            <div class="col fragment">
+              <h4 class="nomargin">1.0</h4>
+              <img src="./images/sphinx-logo.svg" />
+              <p class="fs60 nomargin">Sphinx</p>
+            </div>
+            <div class="col fragment">
+              <h4 class="nomargin">2.0</h4>
+              <img src="./images/materialformkdocs-logo.svg" />
+              <p class="fs60 nomargin">Material for MkDocs</p>
+            </div>
+            <div class="col fragment">
+              <h4 class="nomargin">3.0</h4>
+              <img src="./images/zensical-logo.svg" />
+              <p class="fs60 nomargin">Zensical</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <header>
+            <h2>aprende python</h2>
+            <h3>Estructura 📦</h3>
+          </header>
+          <ul>
+            <li class="fragment">Entornos de desarrollo</li>
+            <li class="fragment">
+              <span class="hl">Fundamentos del lenguaje</span>
+            </li>
+            <li class="fragment">Librería estándar</li>
+            <li class="fragment">
+              Paquetes de terceros — <span class="hl">Django</span>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <header>
+            <h2>pypas</h2>
+            <h3>Arquitectura 🏗️</h3>
+          </header>
+          <div class="r-stack">
+            <div class="columns">
+              <div class="col50 fragment">
+                <p>Cliente</p>
+                <div class="r-stack">
+                  <pre>
+                    <code class="console" data-trim data-noescape>
+                      $ pip install pypas-cli
+                    </code>
+                  </pre>
+                  <pre class="fragment">
+                    <code class="console" data-trim data-noescape>
+                      $ uv add pypas-cli
+                    </code>
+                  </pre>
+                </div>
+                <img src="./images/pypi-logo.svg" class="w40" alt="Logo PyPi" />
+              </div>
+              <div class="col50 fragment">
+                <p>Servidor</p>
+                <pre>
+                  <code class="console" data-trim data-noescape>
+                    github.com/sdelquin/pypas-web
+                  </code>
+                </pre>
+                <img
+                  src="./images/django-logo.svg"
+                  class="w40"
+                  alt="Logo Django"
+                />
+              </div>
+            </div>
+            <img
+              class="fragment w20"
+              style="margin-top: 4rem"
+              src="./images/api.svg"
+              alt="API"
+            />
+          </div>
+        </section>
+
+        <section>
+          <header>
+            <h2>pypas</h2>
+            <h3>Estructura 📦</h3>
+          </header>
+          <div class="r-stack">
+            <pre class="fragment">
+              <code class="console fs70 lh1-5" data-line-numbers="1|3|4|5|6|7|8|9|10|11|12|13|14|15|16" data-trim data-noescape>
+                $ pypas --help
+  
+                get       Get (download) exercise.
+                doc       Open documentation for exercise.
+                update    Update exercise.
+                auth      Authenticate at pypas.es.
+                upgrade   Upgrade pypas-cli from PyPI.
+                zip       Compress exercise contents.
+                put       Put (upload) exercise.
+                test      Test exercise.
+                log       Log of uploaded assignments.
+                list      List exercises.
+                unauth    Unauthenticate from pypas.es (clear token).
+                run       Run exercise with given args.
+                pull      Pull (download) specific assignment or all frame assignments.
+                exercise  Show exercise information.
+              </code>
+            </pre>
+            <img
+              src="./images/sum-diagonal.png"
+              class="fragment w70"
+              alt="Sum Diagonal"
+            />
+          </div>
+        </section>
+
+        <section>
+          <h2>Feedback 📣</h2>
+          <div class="r-stack">
+            <img
+              class="fragment w70"
+              src="./images/midudev.png"
+              alt="Midudev"
+            />
+            <img
+              class="fragment"
+              src="./images/antonio-mele.png"
+              alt="Antonio Melé"
+            />
+            <img
+              class="fragment w60"
+              src="./images/email-mexico.png"
+              alt="Email from Mexico"
+            />
+            <img
+              class="fragment w80"
+              src="./images/github-issue.png"
+              alt="GitHub Issue"
+            />
+            <img
+              class="fragment"
+              src="./images/github-stars.png"
+              alt="GitHub Stars"
+            />
+          </div>
+        </section>
+
+        <section>
+          <h1>Gracias</h1>
+          <a class="fs120" href="https://aprendepython.es">aprendepython.es</a>
+          <br />
+          <a class="fs120" href="https://pypas.es">pypas.es</a>
+          <p class="made-with-revealjs">
+            Hecho con <img class="middle" src="./images/revealjs-logo.svg" />
+          </p>
         </section>
       </div>
     </div>
@@ -71,5 +257,6 @@
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
       });
     </script>
+    <script src="js/custom.js"></script>
   </body>
 </html>
